@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+
+:root {
+  --success-color: rgb(116, 255, 116);
+  --error-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: " Courier New ", Courier, monospace;
+  background-color: floralwhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 2);
+  width: 400px;
+}
+
+form {
+  padding: 30px 15px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: forestgreen;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: black;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 3px solid lightskyblue;
+  background-color: lightskyblue;
+}
